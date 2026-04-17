@@ -2,7 +2,80 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero {
+        height: 100vh;
+        background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0,0,0,0.6);
+    }
+
+    .content-box {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        max-width: 600px;
+        padding: 40px;
+        background: rgba(255,255,255,0.08);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+        .content-box h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .content-box p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+    .btn-ems {
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        background: #28a745;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        .btn-ems:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+</style>
+
+<div class="hero">
+    <div class="overlay"></div>
+
+    <div class="content-box">
+        <h1>Welcome to EMS</h1>
+        <p>Employee Management System built using ASP.NET Core MVC, SQL Server & Dapper.</p>
+
+        <a href="/Employee" class="btn-ems">
+            Go to Employee List →
+        </a>
+    </div>
 </div>
