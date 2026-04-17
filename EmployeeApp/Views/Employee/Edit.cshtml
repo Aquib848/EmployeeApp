@@ -1,0 +1,24 @@
+﻿@model Employee
+
+<h2>Edit Employee</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <input asp-for="FirstName" />
+    <input asp-for="LastName" />
+
+    <input asp-for="DOB" type="date" />
+
+    <input asp-for="Country" />
+    <input asp-for="State" />
+    <input asp-for="City" />
+
+    <input asp-for="Qualification" />
+    <input asp-for="Email" />
+    <input asp-for="Phone" />
+
+    <button type="submit">Update</button>
+
+</form>

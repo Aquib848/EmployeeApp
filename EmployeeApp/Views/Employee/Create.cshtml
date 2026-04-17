@@ -1,0 +1,28 @@
+﻿@model Employee
+
+<h2>Add Employee</h2>
+
+<form method="post">
+
+    <input asp-for="FirstName" placeholder="First Name" />
+    <span asp-validation-for="FirstName"></span>
+
+    <input asp-for="LastName" placeholder="Last Name" />
+
+    <input asp-for="DOB" type="date" />
+
+    <input asp-for="Country" placeholder="Country" />
+
+    <input asp-for="State" placeholder="State" />
+
+    <input asp-for="City" placeholder="City" />
+
+    <input asp-for="Qualification" placeholder="Qualification" />
+
+    <input asp-for="Email" placeholder="Email" />
+
+    <input asp-for="Phone" placeholder="Phone" />
+
+    <button type="submit">Save</button>
+
+</form>
